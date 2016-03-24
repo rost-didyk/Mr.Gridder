@@ -1,0 +1,83 @@
+@import "animate.less";
+
+.mr-gridder-app-bootstrap {
+    @import "bootstrap/variables.less";
+    @import "bootstrap/mixins.less";
+    @import "bootstrap/normalize.less";
+
+    // Core CSS
+    @import "bootstrap/scaffolding.less";
+    @import "bootstrap/type.less";
+    @import "bootstrap/grid.less";
+
+
+    @import "bootstrap/utilities.less";
+    @import "bootstrap/responsive-utilities.less";
+
+    [class*="col-"] {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.mr-gridder-app {
+    overflow: hidden;
+    position: relative;
+
+    .mr-gridder-list-mode {
+        &_column {
+            padding: 10px;
+            &-item {
+                border-radius: 10px;
+                background-color: #23527C;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+                margin-bottom:15px;
+                cursor:pointer;
+                vertical-align:middle;
+                &--view {
+                    position: relative;
+                    height: 75%;
+                    img {
+                        border: 0;
+                        width: 100%;
+                        padding: 10px;
+
+                        position: absolute;
+                        margin: auto;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+                &--intro {
+                    background-color: #102436;
+                    text-align: left;
+                    width: 100%;
+                    opacity: 0.8;
+                    color: #fff;
+                    padding: 5px;
+
+                    position: absolute;
+                    bottom: 0;
+
+                    h2 {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+                &:hover {
+                    background-color: #538DC1;
+                }
+            }
+        }
+    }
+
+    .mr-gridder-full-height {
+        height: 100%;
+    }
+
+}
+

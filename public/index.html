@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dist/mr.gridder.css">
+    <script src="/dist/mr.gridder.js"></script>
+    <title>Mr.Gridder demo page</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2 class="intro">Mr.Griddy responsive portfolio grid</h2>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div id="gridder"></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h2 class="intro">Mr.Griddy responsive portfolio grid</h2>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div id="gridder2"></div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script>
+    var $gridder = document.getElementById('gridder');
+
+    new Gridder({
+        el: $gridder,
+        dataSourceUri: '/public/data.json',
+        columnsNumber: 2,
+        heightFactor: 60,
+        minItemHeight: 320,
+        hoverEffect: 'tada'
+    }).render();
+
+    var $gridder2 = document.getElementById('gridder2');
+
+    new Gridder({
+        el: $gridder2,
+        dataSourceUri: '/public/data.json',
+        columnsNumber: 3,
+        heightFactor: 50,
+        minItemHeight: 200
+    }).render();
+
+</script>
+</body>
+</html>

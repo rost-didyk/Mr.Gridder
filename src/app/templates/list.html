@@ -1,0 +1,31 @@
+<div class="mr-gridder-app mr-gridder-app-bootstrap">
+    <div class="mr-gridder-list-mode">
+        <div class="container-fluid">
+            <div class="row">
+                <% _(columnsData).each(function(column){ %>
+                    <div class="mr-gridder-list-mode_column js-column col-xs-<%= columnCss %>">
+                        <% _(column['items']).each(function(item, index){  %>
+                            <div class="mr-gridder-list-mode_column-item js-column-item"
+                                 data-column_number="<%= column['columnNumber'] %>"
+                                 data-item_index="<%= index %>"
+                                 style="height: <%=item['height']%>px">
+
+                                <div class="mr-gridder-list-mode_column-item--view">
+                                    <img src="<%=item['previewImage']%>" alt="">
+                                </div>
+
+                                <div class="mr-gridder-list-mode_column-item--intro">
+                                    <h2><%= item['title'] %></h2>
+                                    <p>
+                                        <%= item['shortDescribe'] %>
+                                    </p>
+                                </div>
+
+                            </div>
+                        <% }); %>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
